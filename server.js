@@ -20,10 +20,11 @@ app.use((req, res, next) => {
     })
     next()
 })
-app.use((req, res, next) => {
-    res.render("maintainance.hbs")
-    next()
-})
+// app.use((req, res, next) => {
+//     next()
+//     res.render("maintainance.hbs")
+    
+// })
 
 //handlebars middleware
 
@@ -46,6 +47,12 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.render("about.hbs", {
         title: "About Page"
+    })
+})
+
+app.get("/history", (req, res) => {
+    res.render("history.hbs", {
+        title: "History",
     })
 })
 
